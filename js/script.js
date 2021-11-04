@@ -25,3 +25,51 @@ Ogni membro dovrà avere le informazioni necessarie per stampare la relativa car
     // 7.3 Al suo click andrò a salvarmi in ogni variabile la sua value.
     // 7.4 sostituisco la variabile al valore dell oggetto
 // 8. Aggiungo l oggetto al mio array con il push
+
+
+// Array di cards membri 
+const cards = [
+    {
+        "nome" : "Wayne Barnett",
+        "immagine": "img/wayne-barnett-founder-ceo.jpg",
+        "ruolo" : "Founder & CEO"
+    },
+    {
+        "nome" : "Angela Caroll",
+        "immagine": "img/angela-caroll-chief-editor.jpg",
+        "ruolo" : "Chief Editor"
+    },
+    {
+        "nome" : "Walter Gordon",
+        "immagine": "img/walter-gordon-office-manager.jpg",
+        "ruolo" : "Office Manager"
+    },
+    {
+        "nome" : "Angela Lopez",
+        "immagine": "img/angela-lopez-social-media-manager.jpg",
+        "ruolo" : "Social Media Menager"
+    },
+    {
+        "nome" : "Scott Estrada",
+        "immagine": "img/scott-estrada-developer.jpg",
+        "ruolo" : "Developer"
+    },
+    {
+        "nome" : "Barbara Ramos",
+        "immagine": "img/barbara-ramos-graphic-designer.jpg",
+        "ruolo" : "Graphic Designer"
+    }
+
+]
+
+
+//  creo ciclo for per scorrere all interno dell array
+
+for ( let i =  0 ; i < cards.length ; i++){
+    let objectMember = cards[i];
+    let nomeMembro = objectMember.nome;
+    let ruoloMembro = objectMember.ruolo;
+    let immagineMembro = objectMember.immagine
+
+    
+}
