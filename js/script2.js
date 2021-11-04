@@ -51,14 +51,8 @@ addMembersFromArray();
 
 // funzione al click nuovo oggetto
 aggiungi.addEventListener("click",function(){
-    let nuovoOggetto = {
-        "nome" : nomeInput.value,
-        "immagine" : immagineInput.value,
-        "ruolo" : ruoloInput.value
-    }
-    cards.push(nuovoOggetto)
 
-    aggiungiMembro(nomeInput.value,immagineInput.value,ruoloInput.value)
+    aggiungiMembroNomeImmagineRuolo(nomeInput.value,immagineInput.value,ruoloInput.value)
 
 })
 
@@ -97,7 +91,7 @@ function addMembersFromArray (){
     }
 }
 // Funzione aggiungi membro 
-function aggiungiMembro(nomeMembroToAdd,immagineToAdd,ruoloToAdd){
+function aggiungiMembroNomeImmagineRuolo(nomeMembroToAdd,immagineToAdd,ruoloToAdd){
     
 
     let newMembers = {
