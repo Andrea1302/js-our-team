@@ -75,9 +75,7 @@ aggiungi.addEventListener("click", function(){
     let NomeMembroAdd = nomeInput.value;
     let ruoloMembroAdd = ruoloInput.value;
     let immagineMembroAdd = immagineInput.value;
-    if ( immagineMembroAdd.length < 1 ){
-        immagineMembroAdd = "https://via.placeholder.com/400/FF0000/FFFFFF"
-    }
+
     let newMembers = {
         "nome" : NomeMembroAdd,
         "immagine" : immagineMembroAdd,
@@ -94,7 +92,7 @@ aggiungi.addEventListener("click", function(){
     <div class="team-card">
         <div class="card-image">
         <img
-            // src="${immagineMembro}"
+            src="${immagineMembro}"
             alt="${nomeMembro}"
         />
         </div>
@@ -107,3 +105,38 @@ aggiungi.addEventListener("click", function(){
     containerTeam.innerHTML += innerMembers;
 // }
 })
+let NomeMembroAdd = nomeInput.value;
+let ruoloMembroAdd = ruoloInput.value;
+let immagineMembroAdd = immagineInput.value;
+
+function aggiungiMembro(nomeMembroToAdd,immagineToAdd,ruoloToAdd){
+    
+
+    let newMembers = {
+        "nome" : NomeMembroAdd,
+        "immagine" : immagineMembroAdd,
+        "ruolo" : ruoloMembroAdd
+    }
+    cards.push(newMembers)
+    let NewobjectMember = cards[cards.length - 1];
+    let nomeMembro = NewobjectMember.nome;
+    let ruoloMembro = NewobjectMember.ruolo;
+    let immagineMembro = NewobjectMember.immagine
+    
+    // creo stringa inner dove scriverò l html da inserire all interno del mio team container
+    let innerMembers = ` 
+    <div class="team-card">
+        <div class="card-image">
+        <img
+            src="${immagineMembro}"
+            alt="${nomeMembro}"
+        />
+        </div>
+        <div class="card-text">
+        <h3>${nomeMembro}</h3>
+        <p>${ruoloMembro}</p>
+        </div>
+    </div>`
+    // richiamo la variabile dove vorrò inserire questo html 
+    containerTeam.innerHTML += innerMembers;
+}
