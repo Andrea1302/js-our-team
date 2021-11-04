@@ -80,7 +80,7 @@ aggiungi.addEventListener("click", function(){
 
     let newMembers = {
         "nome" : NomeMembroAdd,
-        "immagine" : `img/${immagineMembroAdd}`,
+        "immagine" : immagineMembroAdd,
         "ruolo" : ruoloMembroAdd
     }
     cards.push(newMembers)
