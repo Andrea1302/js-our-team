@@ -31,7 +31,48 @@ Ogni membro dovrà avere le informazioni necessarie per stampare la relativa car
 // Richiamo il div all interno del quale vorrò scrivere 
 const containerTeam = document.querySelector(".team-container");
 
+// Richiamo il pulsante add 
+const aggiungi = document.getElementById("addMemberButton");
 
+// Richiamo variabili per poi leggere gli input
+const nomeInput = document.getElementById("name");
+const ruoloInput = document.getElementById("role");
+const immagineInput = document.getElementById("image");
+aggiungi.addEventListener("click", function(){
+    let NomeMembroAdd = nomeInput.value;
+    let ruoloMembroAdd = ruoloInput.value;
+    let immagineMembroAdd = immagineInput.value;
+
+    let newMembers = {
+        "nome" : NomeMembroAdd,
+        "immagine" : `img/${immagineMembroAdd}`,
+        "ruolo" : ruoloMembroAdd
+    }
+    cards.push(newMembers)
+    let NewobjectMember = cards[cards.length - 1];
+    console.log(NewobjectMember);
+    let nomeMembro = NewobjectMember.nome;
+    let ruoloMembro = NewobjectMember.ruolo;
+    let immagineMembro = NewobjectMember.immagine
+    
+    // creo stringa inner dove scriverò l html da inserire all interno del mio team container
+    let innerMembers = ` 
+    <div class="team-card">
+        <div class="card-image">
+        <img
+            src="${immagineMembro}"
+            alt="${nomeMembro}"
+        />
+        </div>
+        <div class="card-text">
+        <h3>${nomeMembro}</h3>
+        <p>${ruoloMembro}</p>
+        </div>
+    </div>`
+    // richiamo la variabile dove vorrò inserire questo html 
+    containerTeam.innerHTML += innerMembers;
+// }
+})
 
 // Array di cards membri 
 const cards = [
