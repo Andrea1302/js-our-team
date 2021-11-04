@@ -27,6 +27,12 @@ Ogni membro dovrà avere le informazioni necessarie per stampare la relativa car
 // 8. Aggiungo l oggetto al mio array con il push
 
 
+
+// Richiamo il div all interno del quale vorrò scrivere 
+const containerTeam = document.querySelector(".team-container");
+
+
+
 // Array di cards membri 
 const cards = [
     {
@@ -71,5 +77,20 @@ for ( let i =  0 ; i < cards.length ; i++){
     let ruoloMembro = objectMember.ruolo;
     let immagineMembro = objectMember.immagine
 
-    
+    // creo stringa inner dove scriverò l html da inserire all interno del mio team container
+    let innerMembers = ` 
+    <div class="team-card">
+        <div class="card-image">
+        <img
+            src="${immagineMembro}"
+            alt="${nomeMembro}"
+        />
+        </div>
+        <div class="card-text">
+        <h3>${nomeMembro}</h3>
+        <p>${ruoloMembro}</p>
+        </div>
+    </div>`
+    // richiamo la variabile dove vorrò inserire questo html 
+    containerTeam.innerHTML += innerMembers;
 }
