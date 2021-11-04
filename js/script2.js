@@ -45,13 +45,21 @@ const cards = [
     }
 
 ]
+// nuovo oggetto 
+
 // eseguo funzione 
 addMembers();
 
+// funzione al click
 aggiungi.addEventListener("click",function(){
-    let oggettoDaAggiungere = aggiungiMembro(nomeInput.value,immagineInput.value,ruoloInput.value);
+    let nuovoOggetto = {
+        "nome" : nomeInput.value,
+        "immagine" : immagineInput.value,
+        "ruolo" : ruoloInput.value
+    }
+    cards.push(nuovoOggetto)
 
-    containerTeam.innerHTML += oggettoDaAggiungere;
+    aggiungiMembro(nomeInput.value,immagineInput.value,ruoloInput.value)
 
 })
 
@@ -119,5 +127,5 @@ function aggiungiMembro(nomeMembroToAdd,immagineToAdd,ruoloToAdd){
         </div>
     </div>`
     // richiamo la variabile dove vorrò inserire questo html 
-   return innerMembers;
+    containerTeam.innerHTML += innerMembers;
 }
