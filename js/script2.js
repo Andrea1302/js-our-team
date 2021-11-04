@@ -45,15 +45,11 @@ const cards = [
     }
 
 ]
-for ( let key in cards[0]){
-    console.log(key);
-}
-// nuovo oggetto 
 
 // eseguo funzione 
-addMembers();
+addMembersFromArray();
 
-// funzione al click
+// funzione al click nuovo oggetto
 aggiungi.addEventListener("click",function(){
     let nuovoOggetto = {
         "nome" : nomeInput.value,
@@ -75,7 +71,7 @@ aggiungi.addEventListener("click",function(){
 
 
 // Funzione per inserire il mio array di oggetti nell html 
-function addMembers (){
+function addMembersFromArray (){
     for ( let i =  0 ; i < cards.length ; i++){
         let objectMember = cards[i];
         let nomeMembro = objectMember.nome;
@@ -120,7 +116,7 @@ function aggiungiMembro(nomeMembroToAdd,immagineToAdd,ruoloToAdd){
     <div class="team-card">
         <div class="card-image">
         <img
-            src="${immagineMembro}"
+            src="${immagineMembro}" onerror="this.src='https://www.alacbrindisi.it/wp-content/uploads/2019/10/icona-dell-utente-di-vettore-7337510.jpg';" 
             alt="${nomeMembro}"
         />
         </div>

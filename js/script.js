@@ -91,7 +91,7 @@ aggiungi.addEventListener("click", function(){
     <div class="team-card">
         <div class="card-image">
         <img
-            // src="${immagineMembro}" onerror="this.src='https://www.alacbrindisi.it/wp-content/uploads/2019/10/icona-dell-utente-di-vettore-7337510.jpg';" 
+            src="${immagineMembro}" onerror="this.src='https://www.alacbrindisi.it/wp-content/uploads/2019/10/icona-dell-utente-di-vettore-7337510.jpg';" 
             alt="${nomeMembro}"
         />
         </div>
