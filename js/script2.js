@@ -45,6 +45,9 @@ const cards = [
     }
 
 ]
+for ( let key in cards[0]){
+    console.log(key);
+}
 // nuovo oggetto 
 
 // eseguo funzione 

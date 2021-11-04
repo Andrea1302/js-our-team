@@ -75,9 +75,6 @@ aggiungi.addEventListener("click", function(){
     let NomeMembroAdd = nomeInput.value;
     let ruoloMembroAdd = ruoloInput.value;
     let immagineMembroAdd = immagineInput.value;
-    if ( immagineMembroAdd.length < 1 ){
-        immagineMembroAdd = "https://via.placeholder.com/400/FF0000/FFFFFF"
-    }
     let newMembers = {
         "nome" : NomeMembroAdd,
         "immagine" : immagineMembroAdd,
@@ -94,7 +91,7 @@ aggiungi.addEventListener("click", function(){
     <div class="team-card">
         <div class="card-image">
         <img
-            // src="${immagineMembro}"
+            // src="${immagineMembro}" onerror="this.src='https://www.alacbrindisi.it/wp-content/uploads/2019/10/icona-dell-utente-di-vettore-7337510.jpg';" 
             alt="${nomeMembro}"
         />
         </div>
